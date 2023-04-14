@@ -12,8 +12,11 @@ database:
     password: ""
 gocqhttp:
     enable: true
-    http_host: http://10.0.0.2:5700
-    ws_listen: false
+    host_url: ws://10.0.0.2:28781
+    delay: 3000
+    enable_ws: true
+mirai:
+    enable: false
 queue:
     type: internal
     host: ""
@@ -27,8 +30,6 @@ search:
     username: ""
     password: ""
 server:
-    http_port: "3000"
-    ws_port: "4000"
-    enable_ws: false
+    listen_port: "3000"
     debug_mode: false
     file_logger: false
