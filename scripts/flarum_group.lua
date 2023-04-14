@@ -1,4 +1,4 @@
-if not(Callback.CqCall.GroupID == 432511748) then
+if not(Callback.CqCall.GroupID == 432511748) or not(Callback.CqCall.GroupID == 188723593) then
     return
 end
 
