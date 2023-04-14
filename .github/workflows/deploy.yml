@@ -39,7 +39,7 @@ jobs:
             /usr/bin/git pull
             /usr/local/bin/docker stop nyabot
             /usr/local/bin/docker rm nyabot
-            /usr/local/bin/docker image rm whydesd/nyabot:dev
-            /usr/local/bin/docker pull whydesd/nyabot:dev
+            /usr/local/bin/docker image rm whydesd/nyabot:latest
+            /usr/local/bin/docker pull whydesd/nyabot:latest
             /usr/local/bin/docker create -v /Users/server/Documents/NyaBot/config.yaml:/app/config.yaml -v /Users/server/Documents/NyaBot/scripts:/app/scripts --name nyabot whydesd/nyabot:dev
             /usr/local/bin/docker start nyabot
