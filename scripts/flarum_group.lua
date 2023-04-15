@@ -37,3 +37,31 @@ end
 if Callback.CqCall.MessageData == ".deprecated" then
     CqMsg:Reply("请将 php.ini 中的 display_errors 设置为 Off", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
 end
+
+if Callback.CqCall.MessageData == ".permission" then
+    CqMsg:Reply("又不是说我没权限，是你的服务器说的没权限，你不要和我争辩说你已经设置了权限，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+end
+
+function split(text, delim)
+    -- returns an array of fields based on text and delimiter (one character only)
+    local result = {}
+    local magic = "().%+-*?[]^$"
+
+    if delim == nil then
+        delim = "%s"
+    elseif string.find(delim, magic, 1, true) then
+        -- escape magic
+        delim = "%"..delim
+    end
+
+    local pattern = "[^"..delim.."]+"
+    for w in string.gmatch(text, pattern) do
+        table.insert(result, w)
+    end
+    return result
+end
+
+if string.sub(Callback.CqCall.MessageData, 1, 6) == ".argue" then
+    splitRes = split(string.gsub(Callback.CqCall.MessageData, ".argue%s", ""), "%s")
+    CqMsg:Reply("又不是我说的" ..splitRes[1].. "，是你的服务器说的" ..splitRes[2].. "，你不要和我争辩说你已经" ..splitRes[3].. "，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+end
