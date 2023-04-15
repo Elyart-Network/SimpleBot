@@ -28,7 +28,7 @@ dict["unix"] = "Unix"
 dict["macos"] = "MacOS"
 dict["openbsd"] = "OpenBSD"
 
-for key, value in ipairs(dict) do
+for key, value in pairs(dict) do
     if Callback.CqCall.MessageData == "." .. key then
         CqMsg:Reply("这个群不是" .. value .. "新手教学群", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
     end
