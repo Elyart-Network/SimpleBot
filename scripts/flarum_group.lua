@@ -1,4 +1,4 @@
-if not(Callback.CqCall.GroupID == 432511748) and not(Callback.CqCall.GroupID == 188723593) then
+if not(Callback.CqCall.GroupID == 188723593) and not(Callback.CqCall.GroupID == 198848645) then
     return
 end
 
@@ -63,5 +63,15 @@ end
 
 if string.sub(Callback.CqCall.MessageData, 1, 6) == ".argue" then
     splitRes = split(string.gsub(Callback.CqCall.MessageData, ".argue%s", ""), "%s")
-    CqMsg:Reply("又不是我说的" ..splitRes[1].. "，是你的服务器说的" ..splitRes[2].. "，你不要和我争辩说你已经" ..splitRes[3].. "，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+    CqMsg:Reply("又不是我说" ..splitRes[1].. "，是你的服务器说的" ..splitRes[2].. "，你不要和我争辩说你已经" ..splitRes[3].. "，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+end
+
+if string.sub(Callback.CqCall.MessageData, 1, 15) == ".methoddisabled" then
+    splitRes = split(string.gsub(Callback.CqCall.MessageData, ".methoddisabled%s", ""), "%s")
+    CqMsg:Reply("又不是我说没启用" ..splitRes[1].. "函数，是你的服务器说的没启用" ..splitRes[1].. "函数，你不要和我争辩说你已经设置了" ..splitRes[1].. "函数，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+end
+
+if string.sub(Callback.CqCall.MessageData, 1, 12) == ".extnotfound" then
+    splitRes = split(string.gsub(Callback.CqCall.MessageData, ".extnotfound%s", ""), "%s")
+    CqMsg:Reply("又不是我说没启用" ..splitRes[1].. "扩展，是你的服务器说的没启用" ..splitRes[1].. "扩展，你不要和我争辩说你已经设置了" ..splitRes[1].. "扩展，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
 end
