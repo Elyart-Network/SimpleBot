@@ -92,6 +92,6 @@ if Callback.CqCall.MessageData == '.rust' then
     CqMsg:SendMsg("[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]", Callback.CqCall.GroupID, true)
 end
 
-if string.find(Callback.CqCall.MessageData, "原神") ~= nil then
-    CqMsg.SendMsg("这里不是原神交流群", Callback.CqCall.GroupID, true)
+if string.find(Callback.CqCall.MessageData, "原神") then
+    CqMsg:SendMsg("这里不是原神交流群", Callback.CqCall.GroupID, true)
 end
