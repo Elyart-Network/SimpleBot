@@ -89,7 +89,7 @@ if Callback.CqCall.MessageData == '114514' then
 end
 
 if Callback.CqCall.MessageData == '.rust' then
-    CqMsg:SendMsg("[[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]", Callback.CqCall.GroupID, false)
+    CqMsg:SendMsg("[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]", Callback.CqCall.GroupID, false)
 end
 
 if string.find(Callback.CqCall.MessageData, "原神") then
