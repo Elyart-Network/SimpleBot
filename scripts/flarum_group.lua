@@ -81,17 +81,17 @@ if Callback.CqCall.MessageData == '.giveup' then
 end
 
 if Callback.CqCall.MessageData == '你干嘛' then
-    CqMsg:SendMsg("哎哎呦~")
+    CqMsg:SendMsg("哎哎呦~", Callback.CqCall.GroupID, true)
 end
 
 if Callback.CqCall.MessageData == '114514' then
-    CqMsg:SendMsg("1919810")
+    CqMsg:SendMsg("1919810", Callback.CqCall.GroupID, true)
 end
 
 if Callback.CqCall.MessageData == '.rust' then
-    CqMsg:SendMsg("[[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]")
+    CqMsg:SendMsg("[[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]", Callback.CqCall.GroupID, false)
 end
 
 if string.find(Callback.CqCall.MessageData, "原神") then
-    CqMsg.SendMsg("这里不是原神交流群")
+    CqMsg.SendMsg("这里不是原神交流群", Callback.CqCall.GroupID, true)
 end
