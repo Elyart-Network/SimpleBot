@@ -93,5 +93,5 @@ if Callback.CqCall.MessageData == '.rust' then
 end
 
 if string.find(Callback.CqCall.MessageData, "原神") then
-    CqMsg.SendMsg("这里不是原神交流群", Callback.CqCall.GroupID, true)
+    CqMsg:SendMsg("这里不是原神交流群", Callback.CqCall.GroupID, true)
 end
