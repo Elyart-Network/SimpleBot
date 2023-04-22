@@ -20,6 +20,10 @@ if Callback.CqCall.MessageData == ".ks" then
     CqMsg:Reply("KubeSphere是本群唯一指定面板", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
 end
 
+if Callback.CqCall.MessageData == ".1panel" then
+    CqMsg:Reply("1Panel是本群小白替代宝塔指定面板", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+end
+
 dict = {}
 dict["linux"] = "Linux"
 dict["windows"] = "Windows"
