@@ -81,7 +81,10 @@ if string.sub(Callback.CqCall.MessageData, 1, 12) == ".extnotfound" then
 end
 
 if Callback.CqCall.MessageData == '.giveup' then
-    CqMsg:SendMsg("[CQ:image,file=giveup.jpg,url=https://telegra.ph/file/08eef1d517247cf78d654.jpg]", Callback.CqCall.GroupID, true)
+    math.randomseed (os.time ())
+    local rnd = math.random (1, 8)
+    local giveupjson = HttpReq:GetJson("https://api.npoint.io/5622a75a09c982fc930f", "")
+    CqMsg:SendMsg("[CQ:image,file=img.jpg,url=" .. giveupjson.data[rnd] .. "]", Callback.CqCall.GroupID, true)
 end
 
 if Callback.CqCall.MessageData == '你干嘛' then
