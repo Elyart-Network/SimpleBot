@@ -79,3 +79,23 @@ if string.sub(Callback.CqCall.MessageData, 1, 12) == ".extnotfound" then
     splitRes = split(string.gsub(Callback.CqCall.MessageData, ".extnotfound%s", ""), "%s")
     CqMsg:Reply("又不是我说没启用" ..splitRes[1].. "扩展，是你的服务器说的没启用" ..splitRes[1].. "扩展，你不要和我争辩说你已经设置了" ..splitRes[1].. "扩展，你去和你的服务器争辩，谢谢", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
 end
+
+if Callback.CqCall.MessageData == '.giveup' then
+    CqMsg:SendMsg("[CQ:image,file=giveup.jpg,url=https://telegra.ph/file/08eef1d517247cf78d654.jpg]", Callback.CqCall.GroupID, true)
+end
+
+if Callback.CqCall.MessageData == '你干嘛' then
+    CqMsg:SendMsg("哎哎呦~", Callback.CqCall.GroupID, true)
+end
+
+if Callback.CqCall.MessageData == '114514' then
+    CqMsg:SendMsg("1919810", Callback.CqCall.GroupID, true)
+end
+
+if Callback.CqCall.MessageData == '.rust' then
+    CqMsg:SendMsg("[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]", Callback.CqCall.GroupID, true)
+end
+
+if string.find(Callback.CqCall.MessageData, "原神") then
+    CqMsg:SendMsg("这里不是原神交流群", Callback.CqCall.GroupID, true)
+end
