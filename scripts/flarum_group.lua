@@ -112,8 +112,8 @@ end
 
 if string.find(Callback.CqCall.MessageData, "怎么办") or string.find(Callback.CqCall.MessageData, "咋办") or string.find(Callback.CqCall.MessageData, "为什么") or string.find(Callback.CqCall.MessageData, "我是小白") then
     if string.find(Callback.CqCall.MessageData, "原神") then
-        CqMsg:Reply("你这情况我遇到过，这样，你先去应用市场下载一个星穹铁道，下载好了打开它，然后去注册个账号，注册完了开始就行就好了", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+        CqMsg:Reply("你这情况我遇到过，这样，你先去应用市场下载一个星穹铁道，下载好了打开它，然后去注册个账号，注册完了开始游戏就好了", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
     else
-        CqMsg:Reply("你这情况我遇到过，这样，你先去应用市场下载一个原神，下载好了打开它，然后去注册个账号，注册完了开始就行就好了", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+        CqMsg:Reply("你这情况我遇到过，这样，你先去应用市场下载一个原神，下载好了打开它，然后去注册个账号，注册完了开始游戏就好了", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
     end 
 end
