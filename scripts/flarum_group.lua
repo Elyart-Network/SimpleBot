@@ -105,7 +105,7 @@ end
 
 if Callback.CqCall.MessageData == '.生草' then
     math.randomseed (os.time ())
-    local rndc = math.random (1, 24)
+    local rndc = math.random (1, 23)
     local caojson = HttpReq:GetJson("https://api.npoint.io/8ba510e4ebf4eea3c24c", "")
     CqMsg:SendMsg("[CQ:image,file=img.jpg,url=" .. caojson.cao[rndc] .. "]", Callback.CqCall.GroupID, true)
 end
