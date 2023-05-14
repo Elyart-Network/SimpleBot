@@ -95,3 +95,10 @@ end
 if Callback.CqCall.MessageData == '.rust' then
     CqMsg:SendMsg("[CQ:image,file=rust.gif,url=https://telegra.ph/file/795ed5adbbef549e88064.gif]", Callback.CqCall.GroupID, true)
 end
+
+if Callback.CqCall.MessageData == '.生草' then
+    math.randomseed (os.time ())
+    local rndc = math.random (1, 23)
+    local caojson = HttpReq:GetJson("https://api.npoint.io/8ba510e4ebf4eea3c24c", "")
+    CqMsg:SendMsg("[CQ:image,file=img.jpg,url=" .. caojson.cao[rndc] .. "]", Callback.CqCall.GroupID, true)
+end
