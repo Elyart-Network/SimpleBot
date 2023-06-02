@@ -102,3 +102,7 @@ if Callback.CqCall.MessageData == '.生草' then
     local caojson = HttpReq:GetJson("https://api.npoint.io/8ba510e4ebf4eea3c24c", "")
     CqMsg:SendMsg("[CQ:image,file=img.jpg,url=" .. caojson.cao[rndc] .. "]", Callback.CqCall.GroupID, true)
 end
+
+if Callback.CqCall.MessageData == '.itnt' then
+    CqMsg:Reply("itnt 被 github 封号了，请寻找替换版本，例如 flarum-uitab 替换为 gitzaai/mobile-ui-tab-2", Callback.CqCall.GroupID, true, Callback.CqCall.MessageID)
+end
